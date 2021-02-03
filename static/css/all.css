@@ -60,6 +60,8 @@ h1, h2, h3, h4 {
     align-items: center;
     color: #554024;
     justify-content: space-evenly;
+    /*border-bottom: 3px solid black;*/
+
 }
 
 .auth__user, .not-auth__user {
@@ -416,7 +418,7 @@ h2 {
 
 form {
     border-radius: .5rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
     padding: 1.5rem 10%;
     box-shadow: 0px 0px 2rem 2px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -432,6 +434,7 @@ form {
 
 .form h3 {
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 .form-header {

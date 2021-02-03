@@ -2,7 +2,6 @@
             
             <div class="form">
                 <div class="form-header">
-                    <p class="logo-content">somewords<p>
                     <h3>Sign in to somewords</h3>
                 </div>
                 

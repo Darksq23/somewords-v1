@@ -21,10 +21,10 @@ if ($_GET['action'] == "login") {
                     $user = $_SESSION['username'];
                     header("Location: admin_page.php?user=$user");
             } else {
-                header('Location: admin_page.php?message=wrong password!');
+                header('Location: admin_page.php?error=wrong password!');
             }
         } else {
-            header('Location: admin_page.php?message=username not recognized!');
+            header('Location: admin_page.php?error=wrong password or username!');
         }
     }
 }
@@ -55,7 +55,7 @@ else if ($_GET['action'] == "insert") {
     ));
 
     if (!$res) {
-        echo "failed to insert data!";
+        header('Location: admin_page.php?error=failed to insert data!');
     }
     else {
         header('Location: admin_page.php?message=successfuly posted the lyric');
@@ -72,7 +72,13 @@ else if ($_GET['action'] == "edit") {
         'artist' => $_POST['artist'],
         'id' => $_POST['id'],
     ]);
-    header('Location: admin_page.php?message=successfuly edited the lyric');
+    
+    if (!$data) {
+        header('Location: admin_page.php?error=failed to edit the lyric');
+    }
+    else {
+        header('Location: admin_page.php?message=successfuly edited the lyric');
+    }
 }
 
 else if ($_GET['action'] == "delete") {
@@ -82,5 +88,11 @@ else if ($_GET['action'] == "delete") {
     $data->execute([
         'id' => $_GET['id']
     ]);
-    header('Location: admin_page.php?message=successfuly deleted the lyric');
+    
+    if (!$data) {
+        header('Location: admin_page.php?error=failed to delete the lyric!');
+    }
+    else {
+        header('Location: admin_page.php?message=successfuly deleted the lyric');
+    }
 }

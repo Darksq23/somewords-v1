@@ -9,25 +9,28 @@ require "basis.php";
 
     <!--<div class="container">-->
         <div class="not_logged">
+            <?php if (isset($_GET['error'])): ?>
             <div class="alert__box alert__box-errors">
-                <p>errors goes here...</p>
+                <p><?= $_GET['error'] ?></p>
             </div>
+            <?php elseif(isset($_GET['message'])): ?>
             <div class="alert__box alert__box-success">
-                <p>succes message goes here...</p>
+                <p><?= $_GET['message'] ?></p>
             </div>
-            <div class="form__logo">
-                somewords
-            </div>
-            <h3>Sign in to somewords</h3>
+            <?php endif ?>
             <div class="form">
+                <div class="form-header">
+                    <h3>Sign in to somewords</h3>
+                </div>
+                
                 <form action="traitement.php?action=login" method="post">
-                    <label> Username :
+                    <label> Username
                         <input type="text" name="username" required>
                     </label>
-                    <label> Password :
+                    <label> Password
                         <input type="password" name="password" required>
                     </label>
-                    <input type="submit" value="Login" class="btn">
+                    <input type="submit" value="Login" class="btn main__btn">
                 </form>
             </div>
         </div>
@@ -35,14 +38,34 @@ require "basis.php";
         <div class="dashboard" id="hide">
 
             <div class="admin_action_panel">
+                <p class="welcome__message">welcome back administrator <?= $_SESSION['username'] ?></p>
                 <ul>
-                    <li><a href="add.php?user=<?php if (isset($_SESSION['username'])) { echo $_SESSION['username']; }; ?>" id="add__lyrics" class="btn__main">Add lyrics</a></li>
-                    <li><a href="traitement.php?action=logout" class="btn__main">Logout</a></li>
+                    <li>
+                        <a href="add.php?user=
+                            <?php if (isset($_SESSION['username'])): ?>
+                                <?= $_SESSION['username'] ?>"
+                            <?php endif ?>id="add__lyrics" class="simple__btn__cool">
+                            <span class="text">add lyrics</span>
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="traitement.php?action=logout" class="simple__btn__danger">
+                            <span class="text">sign out</span>
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="message">
-                    welcome back <?//= $_GET['user']; ?>
+                <?php if (isset($_GET['error'])): ?>
+                <div class="message__box message__box-errors">
+                    <p><?= $_GET['error'] ?></p>
                 </div>
+                <?php elseif(isset($_GET['message'])): ?>
+                <div class="message__box message__box-success">
+                    <p><?= $_GET['message'] ?></p>
+                </div>
+                <?php endif ?>
                 <div class="song__box">
                     <table class="content__table">
                         <thead>

@@ -33,7 +33,6 @@
             </div>
             <?php endif ?>
         </div>
-        <hr>
     </div>
     <div class="container">
     
