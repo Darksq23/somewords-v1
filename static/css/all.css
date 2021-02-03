@@ -1,0 +1,536 @@
+/***** defining all needed ***/
+
+/*
+
+coding since 4/3/2020
+
+developer berking da quan
+
+colors :
+
+#659dbd // back
+#8d8741 // footer color
+#daad86 //unknown
+#bc986a // fd
+#fbeec1 // other
+
+*/
+
+/*** basics  ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+    background: #bc986a34;
+}
+
+body::selection {
+    background: #659dbd;
+    color: #fbeec1;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: #659dbd;
+    color: #fbeec1;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+/**** End of basics ****/
+
+/********    start of the header      ************/
+
+
+.headbox {
+    display: flex;
+    flex-direction: row;
+    background: #659dbd;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.auth__user, .not-auth__user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+.auth__user p {
+    margin: 0 1rem;
+}
+
+.auth__user a, .not-auth__user a {
+    text-decoration: none;
+    color: #fbeec1;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.logo_box {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.links {
+    text-decoration: none;
+    color: unset;
+}
+
+.logo-img {
+    width: 2rem;
+    position: relative;
+    bottom: .2rem;
+    left: .6rem;
+}
+.nav-link {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fbeec1;
+}
+
+.nav__link__ul li {
+    display: inline-block;
+}
+
+.nav__link__ul li a {
+    text-decoration: none;
+    color: #fbeec1;
+    font-size: .85rem;
+    margin: .2rem;
+    text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fbeec1;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: .5rem;
+    height: 2.3rem;
+    font-family: 'satisfy', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/***** End of the header style *****/
+
+
+
+/**** start of the article style ****/
+.container {
+    color: #554024;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hiden {
+    display: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: .3rem 0 .3rem 0;
+}
+
+.line {
+    width: 85%;
+    margin: 0 auto .3rem auto;
+    position: relative;
+    top: .3rem;
+    opacity: 50%;
+    color: #554024;
+}
+
+.song__name {
+    font-size: 1rem;
+    margin-bottom: .1rem;
+    text-transform: capitalize;
+}
+
+.song_time {
+    font-size: small;
+}
+
+.time_of_upload {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.song__artist {
+    font-size: .9rem;
+    margin-bottom: .3rem;
+    text-transform: capitalize;
+}
+
+.song__genre {
+    margin-top: .3rem;
+}
+
+.card_box {
+    padding: .3rem;
+}
+
+.preview {
+    text-transform: lowercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -html-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gradient {
+    background: linear-gradient(0deg, #8d874150, #ffffff00);
+    border-radius: 5px;
+    z-index: 1000;
+    position: relative;
+}
+
+.gradient > a {
+    text-decoration: none;
+    margin-left: 11rem;
+}
+
+.read__more {
+    color: #554024;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+}
+
+button {
+    background: transparent;
+}
+
+.btn__paggination {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fbeec1;
+    padding: .3rem .6rem;
+    font-family: 'lato', sans-serif;
+    background: #8d8741;
+    border-radius: 5px;
+}
+
+.button {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#prev, #next {
+    margin: .1rem 1rem;
+}
+
+.number_of_present_page {
+    text-decoration: none;
+    color: #8d8741;
+    border: 1px #8d8741 solid;
+    border-radius: 5px;
+    padding: .3rem .6rem;
+}
+
+.direction__btn {
+    border: none;
+}
+
+/**** End of the article style ****/
+
+
+
+/**** start of the footer style ****/
+
+.footer {
+    background: #8d8741;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    color: #fbeec1;
+}
+
+.copy { text-align: center; }
+.summary { text-align: center; }
+.social-list li { display: inline-block; }
+.social-list li { margin: 0 1rem; }
+.icon { width: 1.5rem; }
+.soc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/**** End of the footer style ****/
+
+
+
+
+
+/*******start of the lyrics page ***/
+.header__lyrics {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+.lyrics__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lyrics {
+    padding: 1rem;
+    font-size: 16px;
+    text-transform: lowercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -html-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.lyrics__box {
+    background: #659dbd25;
+    margin-top: .5rem;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.second__header {
+    display: flex;
+    flex-direction: row;
+    font-size: .8rem;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.artist__name { font-family: 'Raleway', sans-serif; font-weight: 600; }
+
+.suggestion {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 9rem 9rem;
+    margin-bottom: -2rem;
+}
+
+.sugge_head {
+    text-transform: capitalize;
+}
+
+.suggestion__header {
+    margin-top: .4rem;
+    margin-bottom: -1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'lato', sans-serif;
+    font-weight: 200;
+}
+
+.suggesstion__box {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sugge {
+    text-align: center;
+}
+
+.uploader {
+    text-align: center;
+    font-size: small;
+    margin: .3rem 0 -.1rem 0;
+}
+/******* end of the lyrics page styles ****/
+
+/***** start of the about page styles *****/
+.who {
+    margin-top: .5rem;
+}
+
+.contact {
+    margin-top: 1rem;
+    font-size: medium;
+}
+
+.box {
+    margin-bottom: -2rem;
+}
+
+.h {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: .4rem;
+}
+/***** end of the about page styles *****/
+
+/***** start of the login page styles *****/
+
+.form__box {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form__ {
+    width: 80%;
+    /*box-shadow: #659dbd .3rem .3rem .3rem .00005rem;*/
+    box-shadow: #554024 0rem 0rem .3rem;
+    border: 1px #8d8741 solid;
+    border-radius: .6rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user__icon {
+    width: 2rem;
+    margin-top: .5rem;
+    color: #659dbd;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: .8rem;
+    box-shadow: 0px 0px 2rem 2px rgba(0,0,0,.15);
+    width: 35%;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+form h1 {
+    text-transform: capitalize;
+}
+
+form > input, form > label > input {
+    margin: .9rem;
+    display: block;
+    font-size: 1rem;
+}
+
+input[placeholder] {
+    color: #554024;
+    font-size: medium;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.btn {
+    background: #659dbd;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    padding: .3rem 1.3rem;
+    border-radius: 10rem;
+    color: #fbeec1;
+    border-bottom: none;
+    box-shadow: #554024 0rem 0rem .3rem;
+}
+
+.or {
+    color: #554024;
+    font-family: fantasy;
+    margin-bottom: .4rem;
+}
+
+.sec-btn {
+    margin: 0 0rem 1rem 0;
+    text-decoration: none;
+    color: #8d8741;
+}
+
+form > input:focus {
+    border: 2px #554024 solid;
+    border-radius: 10rem;
+    height: 1.7rem;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.form_input_box input {
+    border: none;
+    background: none;
+    border-bottom: 2px #554024 solid;
+    font-family: 'lato', sans-serif;
+    color: #554024;
+    margin: 1rem 0;
+}
+
+.form_input_box textarea {
+    background: none;
+    border: 2px #554024 solid;
+    border-radius: 5px;
+    font-family: 'lato', sans-serif;
+}
+
+.form_input_box select {
+    border: none;
+    background: transparent;
+    font-family: 'lato', sans-serif;
+    color: #554024;
+}
+
+select > option {
+    border: none;
+}
+
+/**** following rules prevent user from copying text on somewords. **/
+/***** end of the login page styles *****/

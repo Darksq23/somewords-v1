@@ -1,0 +1,122 @@
+/************* following style rules *************/
+/************* Berking Da Quan *************/
+/************* 28/3/2020 - 21:26' **************/
+/******* start of admin page style *******/
+
+.dashboard {
+    width: 90%;
+    text-align: center;
+    margin: 1rem auto -2rem;
+}
+
+.song__box {
+    margin: 2rem 0;
+}
+
+/* designing the table for displaying the lyrics 
+  --table
+*/
+
+table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+.table__element__small {
+    width: 5%;
+    text-align: left;
+    padding-left: .3rem;
+}
+
+.action {
+    text-align: center;
+    padding: 0;
+    width: 2%;
+}
+
+.table__element {
+    width: 15%;
+}
+
+.table__element__song-name {
+    width: 45%;
+}
+
+.table__element, .table__element__song-name {
+    width: 20%;
+    text-align: left;
+    padding-left: .3rem;
+    font-size: 1.2rem;
+}
+
+thead td {
+    padding-left: .3rem;
+}
+
+thead tr {
+    background-color: #659dbd;
+    color: #fff;
+    padding-left: .3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+tr:hover:not(thead tr) {
+    background-color: #659dbda8;
+    color: #fff;
+}
+/*
+td {
+    border: solid rgba(0, 0, 0, 0.3) .1rem;
+}
+
+/* end of the table design */
+
+.action__btn {
+    text-decoration: underline;
+}
+
+.admin_action_panel {
+    color: #554024;
+    border-radius: 5px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_action_panel ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.admin_action_panel ul li a {
+    margin: 0 1rem;
+    border: 1px #554024 solid;
+    padding: .4rem 1rem;
+    border-radius: 5px;
+}
+
+.song_link {
+    max-width: 560px;
+    width: 95%;
+    margin: 1rem auto;
+    height: 315px;
+}
+
+a.ytp-title-channel-logo {
+    display: none;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/******* end of admin page style ******/
