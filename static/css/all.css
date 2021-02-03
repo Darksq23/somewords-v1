@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
 .headbox {
     display: flex;
     flex-direction: row;
-    /*background: #659dbd;*/
+    background: #bc986a5d;
     align-items: center;
     color: #554024;
     justify-content: space-evenly;
@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
     align-items: center;
     left: .5rem;
     height: 2.3rem;
-    font-family: 'satisfy', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     text-transform: uppercase;
     font-size: 1.5rem;
     margin-left: .5rem;
@@ -428,7 +428,6 @@ form {
 }
 
 .logo-content {
-    font-family: cursive;
     font-size: 1.1rem;
 }
 
