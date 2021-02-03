@@ -36,7 +36,9 @@ require "basis.php";
         </div>
 
         <div class="dashboard" id="hide">
-
+            <div class="modal__box">
+                <h2 class="modal__box--header">Box</h2>
+            </div>
             <div class="admin_action_panel">
                 <p class="welcome__message">welcome back administrator <?= $_SESSION['username'] ?></p>
                 <ul>
@@ -87,7 +89,7 @@ require "basis.php";
                             <td class="table__element"><?php echo $data['artist']; ?></td>
                             <td class="table__element"><?php echo $data['time_of_upload']; ?></td>
                             <td class="table__element__small"><?php echo $data['genre']; ?></td>
-                            <td class="table__element__small action"><a href="traitement.php?action=edit&message=test&id=<?php echo $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-edit"></i></a>
+                            <td class="table__element__small action"><a href="edit.php?id=<?php echo $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-edit"></i></a>
                             </td>
                             <td class="table__element__small action"><a href="traitement.php?action=delete&id=<?php echo $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-trash-alt"></i></a></a>
                             </td>
