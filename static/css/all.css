@@ -276,11 +276,8 @@ button {
 /**** start of the footer style ****/
 
 .footer {
-    background: #8d8741;
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-    color: #fbeec1;
+    margin: 3rem 0 1rem;
+    color: #554024;
 }
 
 .copy { text-align: center; }
