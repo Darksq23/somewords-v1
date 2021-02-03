@@ -1,16 +1,20 @@
 <?php require 'header.php' ?>
-
+            
             <div class="form">
+                <div class="form-header">
+                    <p class="logo-content">somewords<p>
+                    <h3>Sign in to somewords</h3>
+                </div>
+                
                 <form action="traitement.php?action=login" method="post">
-                    <h1 class="title">Login here</h1>
-                    <label> Username :
+                    <label> Username
                         <input type="text" name="username" required>
                     </label>
-                    <label> Password :
+                    <label> Password
                         <input type="password" name="password" required>
                     </label>
-                    <input type="submit" value="Login" class="btn">
+                    <input type="submit" value="Login" class="btn main__btn">
                 </form>
             </div>
 
-<?php require 'footer.php' ?>
+<?php //require 'footer.php' ?>

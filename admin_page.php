@@ -15,10 +15,12 @@ require "basis.php";
             <div class="alert__box alert__box-success">
                 <p>succes message goes here...</p>
             </div>
-
+            <div class="form__logo">
+                somewords
+            </div>
+            <h3>Sign in to somewords</h3>
             <div class="form">
                 <form action="traitement.php?action=login" method="post">
-                    <h1 class="title">Login here</h1>
                     <label> Username :
                         <input type="text" name="username" required>
                     </label>

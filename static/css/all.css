@@ -56,8 +56,9 @@ h1, h2, h3, h4 {
 .headbox {
     display: flex;
     flex-direction: row;
-    background: #659dbd;
+    /*background: #659dbd;*/
     align-items: center;
+    color: #554024;
     justify-content: space-evenly;
 }
 
@@ -74,7 +75,8 @@ h1, h2, h3, h4 {
 
 .auth__user a, .not-auth__user a {
     text-decoration: none;
-    color: #fbeec1;
+    /*color: #fbeec1;*/
+    color: #554024;
     font-size: 1.3rem;
     font-weight: 600;
 }
@@ -91,12 +93,6 @@ h1, h2, h3, h4 {
     color: unset;
 }
 
-.logo-img {
-    width: 2rem;
-    position: relative;
-    bottom: .2rem;
-    left: .6rem;
-}
 .nav-link {
     flex-grow: 1;
     text-align: center;
@@ -121,7 +117,8 @@ h1, h2, h3, h4 {
 
 .logo a {
     text-decoration: none;
-    color: #fbeec1;
+    /*color: #fbeec1;*/
+    color: #554024;
 }
 
 .logo {
@@ -133,6 +130,7 @@ h1, h2, h3, h4 {
     font-family: 'satisfy', sans-serif;
     text-transform: uppercase;
     font-size: 1.5rem;
+    margin-left: .5rem;
 }
 
 img {
@@ -151,7 +149,7 @@ img {
 .container {
     color: #554024;
     width: 95%;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 .hiden {
@@ -295,6 +293,10 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+.soc > li a {
+    color: black;
+}
 /**** End of the footer style ****/
 
 
@@ -410,73 +412,75 @@ h2 {
 
 /***** start of the login page styles *****/
 
-.form__box {
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.form__ {
-    width: 80%;
-    /*box-shadow: #659dbd .3rem .3rem .3rem .00005rem;*/
-    box-shadow: #554024 0rem 0rem .3rem;
-    border: 1px #8d8741 solid;
-    border-radius: .6rem;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.user__icon {
-    width: 2rem;
-    margin-top: .5rem;
-    color: #659dbd;
+.form {
+    margin: 3rem auto;
+    width: 30%;
 }
 
 form {
+    border-radius: .5rem;
+    margin-top: 1rem;
+    padding: 1.5rem 10%;
+    box-shadow: 0px 0px 2rem 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-content {
+    font-family: cursive;
+    font-size: 1.1rem;
+}
+
+.form h3 {
+    font-weight: 300;
+}
+
+.form-header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: .8rem;
-    box-shadow: 0px 0px 2rem 2px rgba(0,0,0,.15);
-    width: 35%;
-    border-radius: 10px;
-    padding: 1rem;
 }
 
-form h1 {
-    text-transform: capitalize;
-}
-
-form > input, form > label > input {
-    margin: .9rem;
+form label, form input {
     display: block;
-    font-size: 1rem;
+    margin: .3rem 0;
 }
 
-input[placeholder] {
-    color: #554024;
-    font-size: medium;
-    font-family: 'Raleway', sans-serif;
-    position: relative;
+form label {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: .5rem 0;
+}
+
+form input,
+form input:hover,
+form input:focus,
+form input:active {
+    border: none;
+    outline: none;
+}
+
+form input {
+    padding: .5rem 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'nunito', sans-serif;
+    background-color: #bc986a35;
+    border-radius: .5rem;
 }
 
 .btn {
-    background: #659dbd;
-    font-size: large;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-    text-transform: capitalize;
-    padding: .3rem 1.3rem;
-    border-radius: 10rem;
+    width: 70%;
+    margin-top: .8rem;
+    font-size: 1rem;
+}
+
+.main__btn {
+    background-color: #2013038e;
     color: #fbeec1;
-    border-bottom: none;
-    box-shadow: #554024 0rem 0rem .3rem;
 }
 
 .or {
@@ -491,41 +495,10 @@ input[placeholder] {
     color: #8d8741;
 }
 
-form > input:focus {
-    border: 2px #554024 solid;
-    border-radius: 10rem;
-    height: 1.7rem;
-    font-size: .9rem;
-    text-align: center;
-}
-
 .title {
     text-align: center;
     font-weight: 600;
     margin: 1rem 0;
-}
-
-.form_input_box input {
-    border: none;
-    background: none;
-    border-bottom: 2px #554024 solid;
-    font-family: 'lato', sans-serif;
-    color: #554024;
-    margin: 1rem 0;
-}
-
-.form_input_box textarea {
-    background: none;
-    border: 2px #554024 solid;
-    border-radius: 5px;
-    font-family: 'lato', sans-serif;
-}
-
-.form_input_box select {
-    border: none;
-    background: transparent;
-    font-family: 'lato', sans-serif;
-    color: #554024;
 }
 
 select > option {

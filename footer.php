@@ -11,9 +11,9 @@
         </div>
         <div class="social">
                 <ul class="social-list soc">
-                    <li><a href="#"><img src="static/svg/facebook.svg" class="icon"></a></li>
-                    <li><a href="#"><img src="static/svg/twitter.svg" class="icon"></a></li>
-                    <li><a href="#"><img src="static/svg/instagram.svg" class="icon"></a></li>
+                    <li><a href="#"><i class="fas fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fas fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fas fa-youtube-square"></i></a></li>
                 </ul>
         </div>
         <div class="copyright">
