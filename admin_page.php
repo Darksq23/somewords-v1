@@ -36,11 +36,9 @@ require "basis.php";
         </div>
 
         <div class="dashboard" id="hide">
-            <div class="modal__box">
-                <h2 class="modal__box--header">Box</h2>
-            </div>
+
             <div class="admin_action_panel">
-                <p class="welcome__message">welcome back administrator <?= $_SESSION['username'] ?></p>
+                <p class="welcome__message">welcome back <?= $_SESSION['username'] ?></p>
                 <ul>
                     <li>
                         <a href="add.php?user=

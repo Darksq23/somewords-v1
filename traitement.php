@@ -66,14 +66,14 @@ else if ($_GET['action'] == "edit") {
     require_once "basis.php";
     $query = 'update lyrics set song_name= :song_name, lyrics= :lyrics, artist= :artist where id = :id';
     $data = $dbconnection->prepare($query);
-    $data->execute([
+    $res = $data->execute([
         'song_name' => $_POST['song_name'],
         'lyrics' => $_POST['lyrics'],
         'artist' => $_POST['artist'],
-        'id' => $_POST['id'],
+        'id' => $_GET['id'],
     ]);
     
-    if (!$data) {
+    if (!$res) {
         header('Location: admin_page.php?error=failed to edit the lyric');
     }
     else {
