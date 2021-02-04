@@ -200,7 +200,35 @@ h1 {
 }
 
 .card_box {
-    padding: .3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card_box a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    text-transform: inherit;
+}
+
+.song_name, .artist, .genre {
+    text-transform: capitalize;
+}
+
+.artist {
+    font-weight: 400;
+}
+
+.song_name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.genre {
+    font-weight: 600;
 }
 
 .preview {
@@ -213,63 +241,33 @@ h1 {
     user-select: none;
 }
 
-.gradient {
-    background: linear-gradient(0deg, #8d874150, #ffffff00);
-    border-radius: 5px;
-    z-index: 1000;
-    position: relative;
-}
-
-.gradient > a {
-    text-decoration: none;
-    margin-left: 11rem;
-}
-
-.read__more {
-    color: #554024;
-    text-align: center;
-    font-weight: bold;
-    display: block;
-    text-transform: capitalize;
-}
-
-button {
-    background: transparent;
-}
-
-.btn__paggination {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fbeec1;
-    padding: .3rem .6rem;
-    font-family: 'lato', sans-serif;
-    background: #8d8741;
-    border-radius: 5px;
-}
-
-.button {
-    margin-top: 1rem;
+.pagination {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
-#prev, #next {
-    margin: .1rem 1rem;
+.btn__prev, .btn__next {
+    border: 1px solid #554024;
+    padding: .3% .8%;
+    border-radius: 3px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
+    margin: 0 5%;
+}
+.page__number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: #554024;
+    color: #fbeec1;
+    border-radius: 3px;
+    padding: .125% 1%;
 }
 
-.number_of_present_page {
-    text-decoration: none;
-    color: #8d8741;
-    border: 1px #8d8741 solid;
-    border-radius: 5px;
-    padding: .3rem .6rem;
-}
-
-.direction__btn {
-    border: none;
-}
 
 /**** End of the article style ****/
 
@@ -282,7 +280,11 @@ button {
     color: #554024;
 }
 
-.copy { text-align: center; }
+.copyright {
+    margin-top: 2rem;
+}
+
+.copy { text-align: center; margin-top: 2rem; }
 .summary { text-align: center; }
 .social-list li { display: inline-block; }
 .social-list li { margin: 0 1rem; }
@@ -400,6 +402,10 @@ h2 {
 
 .box {
     margin-bottom: -2rem;
+}
+
+.box h1 {
+    margin-bottom: 1.5rem;
 }
 
 .h {

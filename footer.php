@@ -23,7 +23,7 @@
                 </ul>
         </div>-->
         <div class="copyright">
-            <p class="copy">Copyright Somewords, Inc 2021 all right reserved</p>
+            <p class="copy">&copy; Copyright 2021 Somewords, all right reserved</p>
         </div>
     </div>
 </body>

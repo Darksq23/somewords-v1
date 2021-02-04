@@ -4,41 +4,24 @@ $query = 'SELECT * FROM lyrics';
 $data = $dbconnection->query($query);
 ?>
 <?php require 'header.php' ?>
-
 <div class="container box">
     <h1>Lyrics of the moment</h1>
-    <hr class="line hiden"/>
     <?php while($res = $data->fetch()) { ?>
         <div class="card_box">
-            <div class="card__header">
-                <h3 class="song__name">Title : <?php echo $res['song_name']; ?></h3>
-                <p class="song__artist">Artist : <?php echo $res['artist']; ?></p>
-            </div>
-            <div class="part__lyrics">
-                <p class="preview gradient">
-                    <?php
-                    $shap = strlen($res['lyrics']);
-                    if ($shap >= 80) {
-                        echo substr($res['lyrics'], 0, 80)."...";
-                    }
-                     else {
-                         echo $res['lyrics'];
-                     }
-                    ?>
-                    <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>" class="read__more" id="read__more__button">Read
-                        more</a>
-                </p>
-
-            </div>
-            <div class="card__footer">
-                <p class="song__genre">Genre : <?php echo $res['genre']; ?> </p>
-                <p class="song__genre">Time : <?php echo $res['time_of_upload']; ?></p>
-            </div>
-            <hr class="line"/>
+            <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>">
+            <p class="song_name"><?php echo $res['song_name']; ?></p>
+            </a>
+            <p class="artist"><?php echo $res['artist']; ?></p>
+            <p class="genre"><?php echo $res['genre']; ?></p>
+            <p class="time"><?php echo $res['time_of_upload']; ?></p>
         </div>
         <?php
     }$data->closeCursor();
     ?>
+    <div class="pagination">
+        <button class="btn__prev"><i class="fas fa-arrow-left"></i> prev</button>
+        <p class="page__number">1</p>
+        <button class="btn__next">next <i class="fas fa-arrow-right"></i></button>
+    </div>
 </div>
-
 <?php require 'footer.php' ?>
