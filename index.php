@@ -1,9 +1,5 @@
 <?php
 require_once "basis.php";
-$query = 'SELECT * FROM lyrics';
-//$query = 'SELECT * FROM lyrics limit $offset, $no_of_record';
-$data = $dbconnection->query($query);
-
 ///////// pagination
 
 //detecter la page actuel
@@ -13,7 +9,7 @@ if (isset($_GET['pageno'])) {
     $pageno = 1;
 }
 // fixer le nombre d'entrer a recuperer
-$no_of_record = 2;
+$no_of_record = 1;
 // trouver la limite
 $offset = ($pageno - 1) * $no_of_record;
 // compte des données dans la db
@@ -22,11 +18,15 @@ $total_entries_number = $total_entries->fetchColumn();
 // page total possible
 $total_pages = ceil($total_entries_number / $no_of_record);
 
+$query = "SELECT * FROM lyrics ORDER BY id DESC LIMIT $offset, $no_of_record";
+$data = $dbconnection->prepare($query);
+$data->execute();
+
 ?>
 <?php require 'header.php' ?>
 <div class="container box">
     <h1>Lyrics of the moment</h1>
-    <?php while($res = $data->fetch()) { ?>
+    <?php while($res = $data->fetch()){ ?>
         <div class="card_box">
             <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>">
             <p class="song_name"><?php echo $res['song_name']; ?></p>
@@ -36,19 +36,29 @@ $total_pages = ceil($total_entries_number / $no_of_record);
             <p class="time"><?php echo $res['time_of_upload']; ?></p>
         </div>
         <?php
-    }$data->closeCursor();
-    ?><!-- <?php/*
+        }
+        $data->closeCursor();
+        ?>
     <div class="pagination">
-        <button class="btn__prev">
-            <i class="fas fa-arrow-left"></i> prev
-            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
-            </button>
-        <p class="page__number">1</p>
-        <button class="btn__next">
-            next <i class="fas fa-arrow-right"></i>
-            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
-        </button>
+        <ul>
+            <li><a href="?pageno=1"><p><i class="fas fa-backward"></i> First<p></a></li>
+            <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><p><i class="fas fa-arrow-left"></i> Prev</p></a>
+            </li>
+            <li>
+                <li><a href="?pageno=1"><?= 1 ?></a></li>
+                <li><a href="?pageno=<?= $pageno -1 ?>" class="<?php if($pageno - 1 == 1) {echo 'hide';}?>">
+                <?= $pageno - 1?></a></li>
+                <li><a href="?pageno=<?= $pageno ?>"><?= $pageno ?></a></li>
+                <li><a href="?pageno=<?= $pageno + 1 ?>" class="<?php if($pageno + 1 == $total_pages) {echo 'hide';}?>">
+                <?= $pageno + 1 ?></a></li>
+                <li><a href="?pageno=<?= $total_pages ?>"><?= $total_pages ?></a></li>
+            </li>
+            <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><p>Next <i class="fas fa-arrow-right"></i></p></a>
+            </li>
+            <li><a href="?pageno=<?php echo $total_pages; ?>"><p>Last <i class="fas fa-forward"></i></p></a></li>
+        </ul>
     </div>
-    <?= $total_pages ?>
-</div> */ ?> -->
+</div>
 <?php require 'footer.php' ?>

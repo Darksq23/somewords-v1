@@ -241,23 +241,25 @@ h1 {
     user-select: none;
 }
 
+.pagination ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
 .pagination {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
 }
 
-.btn__prev, .btn__next {
-    border: 1px solid #554024;
-    padding: .3% .8%;
-    border-radius: 3px;
-    background: transparent;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: inherit;
-    margin: 0 5%;
+.pagination i {
+    
 }
+
+.hide {
+    display: none;
+}
+
 .page__number {
     font-size: 1.3rem;
     font-weight: bold;
@@ -265,7 +267,7 @@ h1 {
     background-color: #554024;
     color: #fbeec1;
     border-radius: 3px;
-    padding: .125% 1%;
+    padding: .25% 2%;
 }
 
 
