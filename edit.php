@@ -8,10 +8,28 @@ $data->execute([
 ]);
 ?>
 
-<?php while($res = $data->fetch()): ?>
-<h3 class="title">edit <?= $res['song_name'] ?></h3>
+<script type="text/javascript">
+// Auto-Grow-TextArea script.
 
-    <div class="admin__form form">
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+</script>
+
+
+<?php while($res = $data->fetch()): ?>
+<h3 class="title">Edit <?= $res['song_name'] ?> by <?= $res['artist'] ?></h3>
+
+    <div class="admin__form">
 
         <form action="traitement.php?action=edit&id=<?= $res['id'] ?>" method="post">
             <div class="form_input_box">
@@ -22,9 +40,7 @@ $data->execute([
 
             <div class="form_input_box">
                 <label>lyrics :
-                    <textarea name="lyrics" rows="20" cols="80">
-                        <?= $res['lyrics'] ?>
-                    </textarea>
+                    <textarea name="lyrics" rows="5" cols="40" required onkeyup="AutoGrowTextArea(this)"><?= $res['lyrics'] ?></textarea>
                 </label>
             </div>
 

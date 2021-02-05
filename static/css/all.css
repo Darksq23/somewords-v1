@@ -264,6 +264,11 @@ h1 {
     justify-content: center;
 }
 
+.disabled, .disabled a {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
 /**** End of the article style ****/
 
 
@@ -470,6 +475,30 @@ form input {
     font-family: 'nunito', sans-serif;
     background-color: #bc986a35;
     border-radius: .5rem;
+}
+
+textarea {
+    border: none;
+    background-color: #bc986a35;
+    border-radius: 10px;
+    display: block;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.admin__form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0 0 1rem;
+}
+
+textarea:focus,
+textarea:active,
+textarea:hover {
+    border: none;
+    outline: none;
 }
 
 .btn {

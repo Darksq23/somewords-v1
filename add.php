@@ -3,11 +3,26 @@ require "header.php";
 require "basis.php";
 ?>
 
-<h2 class="title">Welcome <?php echo $_GET['user']?></h2>
-<h3 class="title">Complete the following formular to add new lyrics in the database</h3>
-<h4><a href="admin_page.php" class="links">Back on the dashboard</a></h4>
+<script type="text/javascript">
+// Auto-Grow-TextArea script.
+
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+</script>
+
+<h2 class="title">Add new lyrics</h2>
 <div class="container">
-    <div class="form">
+    <div class="admin__form">
         <form action="traitement.php?action=insert" method="post">
             <div class="form_input_box">
                 <label>artist :
@@ -17,7 +32,7 @@ require "basis.php";
 
             <div class="form_input_box">
                 <label>lyrics :
-                    <textarea name="lyrics" rows="20" cols="80" required></textarea>
+                    <textarea name="lyrics" rows="5" cols="40" required onkeyup="AutoGrowTextArea(this)"></textarea>
                 </label>
             </div>
 
@@ -40,7 +55,7 @@ require "basis.php";
                     <option value="HIP HOP">HIP HOP</option>
                 </select>
             </div>
-            <input type="submit" value="Post Lyric" class="btn box">
+            <input type="submit" value="Post Lyric" class="btn main__btn">
         </form>
     </div>
 </div>

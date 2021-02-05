@@ -9,7 +9,7 @@ if (isset($_GET['pageno'])) {
     $pageno = 1;
 }
 // fixer le nombre d'entrer a recuperer
-$no_of_record = 1;
+$no_of_record = 12;
 // trouver la limite
 $offset = ($pageno - 1) * $no_of_record;
 // compte des données dans la db
@@ -52,5 +52,6 @@ $data->execute();
             <li><a href="?pageno=<?php echo $total_pages; ?>">Last <i class="fas fa-forward"></i></a></li>
         </ul>
     </div>
+    <script>document.querySelector('.disabled').addEventListener('click',function(e){e.preventDefault()});</script>
 </div>
 <?php require 'footer.php' ?>
