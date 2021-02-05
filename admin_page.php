@@ -25,10 +25,10 @@ require "basis.php";
                 
                 <form action="traitement.php?action=login" method="post">
                     <label> Username
-                        <input type="text" name="username" required>
+                        <input type="text" name="username" required autocomplete="off">
                     </label>
                     <label> Password
-                        <input type="password" name="password" required>
+                        <input type="password" name="password" required autocomplete="off">
                     </label>
                     <input type="submit" value="Login" class="btn main__btn">
                 </form>
