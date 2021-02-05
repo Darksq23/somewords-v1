@@ -246,30 +246,23 @@ h1 {
     margin: 0 1rem;
 }
 
+.pagination ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page__number {
+    padding: .1rem .5rem;
+    border-radius: 2px;
+    background-color: #659dbd;
+    color: #fff;
+}
+
 .pagination {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.pagination i {
-    
-}
-
-.hide {
-    display: none;
-}
-
-.page__number {
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: inherit;
-    background-color: #554024;
-    color: #fbeec1;
-    border-radius: 3px;
-    padding: .25% 2%;
-}
-
 
 /**** End of the article style ****/
 

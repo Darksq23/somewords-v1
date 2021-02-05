@@ -41,23 +41,15 @@ $data->execute();
         ?>
     <div class="pagination">
         <ul>
-            <li><a href="?pageno=1"><p><i class="fas fa-backward"></i> First<p></a></li>
+            <li><a href="?pageno=1"><i class="fas fa-backward"></i> First</a></li>
             <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-                <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><p><i class="fas fa-arrow-left"></i> Prev</p></a>
+                <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><i class="fas fa-arrow-left"></i> Prev</a>
             </li>
-            <li>
-                <li><a href="?pageno=1"><?= 1 ?></a></li>
-                <li><a href="?pageno=<?= $pageno -1 ?>" class="<?php if($pageno - 1 == 1) {echo 'hide';}?>">
-                <?= $pageno - 1?></a></li>
-                <li><a href="?pageno=<?= $pageno ?>"><?= $pageno ?></a></li>
-                <li><a href="?pageno=<?= $pageno + 1 ?>" class="<?php if($pageno + 1 == $total_pages) {echo 'hide';}?>">
-                <?= $pageno + 1 ?></a></li>
-                <li><a href="?pageno=<?= $total_pages ?>"><?= $total_pages ?></a></li>
-            </li>
+            <li><p class="page__number"><?= $pageno ?></p></li>
             <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-                <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><p>Next <i class="fas fa-arrow-right"></i></p></a>
+                <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next <i class="fas fa-arrow-right"></i></a>
             </li>
-            <li><a href="?pageno=<?php echo $total_pages; ?>"><p>Last <i class="fas fa-forward"></i></p></a></li>
+            <li><a href="?pageno=<?php echo $total_pages; ?>">Last <i class="fas fa-forward"></i></a></li>
         </ul>
     </div>
 </div>

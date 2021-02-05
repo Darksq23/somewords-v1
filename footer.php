@@ -3,7 +3,7 @@
     <script type="text/javascript" src="static/js/app.js"></script>
     <div class="footer">
         <div class="copyright">
-            <p class="copy">&copy; Copyright 2021 Somewords, all right reserved</p>
+            <p class="copy">Copyright &copy; 2021 Somewords, all right reserved</p>
         </div>
     </div>
 </body>
