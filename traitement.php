@@ -19,12 +19,19 @@ if ($_GET['action'] == "login") {
                     $_SESSION['password'] = $_POST['password'];
                     setcookie('username', $_POST['username'], time() + 86400 * 30, '/'); // 86400 means a day
                     $user = $_SESSION['username'];
-                    header("Location: admin_page.php?user=$user");
+                    if(isset($_GET['page']) && !empty($_GET['page'])) {
+                        $location = $_GET["page"];
+                    }
+                    else {
+                        $location = 'admin_page.php';
+                    }
+                    header('Location: '.$location);
+                        
             } else {
-                header('Location: admin_page.php?error=wrong password!');
+                header('Location: login.php?error=wrong password!');
             }
         } else {
-            header('Location: admin_page.php?error=wrong password or username!');
+            header('Location: login.php?error=wrong password or username!');
         }
     }
 }

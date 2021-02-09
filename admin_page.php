@@ -77,7 +77,7 @@ require "basis.php";
                             </tr>
                         </thead>
             <?php
-            $query = 'SELECT * FROM lyrics';
+            $query = 'SELECT * FROM lyrics ORDER BY id DESC';
             $result = $dbconnection->query($query);
             while ($data = $result->fetch()) {
                 ?>
