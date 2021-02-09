@@ -46,8 +46,8 @@ while($res = $data->fetch()) { ?>
                     else {?>
                         <div class="suggesstion__box">
                             <div class="sugge">
-                                <h3 class="sugge_head"><a href="lyrics.php?id=<?php echo $result['id']; ?>" class="links"><?php echo $result['song_name'] ?></a></h3>
-                                <p class="song_time"><?php echo $result['artist'] ?> | <?php echo $result['time_of_upload'] ?></p>
+                                <h3 class="sugge_head"><a href="lyrics.php?song_name=<?= $result['song_name']; ?>" class="links"><?php echo $result['song_name'] ?></a></h3>
+                                <p class="song_time"><?php echo $result['artist'] ?> | <?= $result['time_of_upload'] ?></p>
                             </div>
                         </div><?php
                     }
