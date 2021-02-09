@@ -1,1 +1,763 @@
-@import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);@import url(https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap);body{font-family:Nunito,sans-serif;font-weight:400;background:#bc986a34}body::selection{background:#659dbd;color:#fbeec1}*,::after,::before{margin:0;padding:0;box-sizing:border-box}::selection{background:#659dbd;color:#fbeec1}h1,h2,h3,h4{font-weight:700}.headbox{display:flex;flex-direction:row;background:#bc986a5d;align-items:center;color:#554024;justify-content:space-between;position:relative}.user__box{margin-right:2rem}.auth__user,.not-auth__user{display:flex;flex-direction:row;justify-content:space-between;margin-right:1rem}.auth__user p{margin:0 1rem}.auth__user a,.not-auth__user a{text-decoration:none;color:#554024;font-size:1.3rem;font-weight:600}.logo_box{flex-grow:2;display:flex;flex-direction:row;align-items:center}.links{text-decoration:none;color:unset}.nav-link{flex-grow:1;text-align:center;font-weight:700;display:flex;align-items:center;justify-content:center;color:#fbeec1}.nav__link__ul li{display:inline-block}.nav__link__ul li a{text-decoration:none;color:#fbeec1;font-size:.85rem;margin:.2rem;text-transform:uppercase}.logo a{text-decoration:none;color:#554024}.logo{display:flex;position:relative;align-items:center;left:.5rem;height:2.3rem;font-family:'Julius Sans One',sans-serif;text-transform:uppercase;font-size:1.5rem;margin-left:.5rem}img{width:100%;height:auto;display:block}.container{color:#554024;width:95%;margin:1rem auto}.hiden{display:none}h1{text-transform:uppercase;text-align:center;font-size:1.2rem;margin:.3rem 0 .3rem 0}.line{width:85%;margin:0 auto .3rem auto;position:relative;top:.3rem;opacity:50%;color:#554024}.song__name{font-size:1rem;margin-bottom:.1rem;text-transform:capitalize}.song_time{font-size:small}.time_of_upload{font-family:Raleway,sans-serif;font-weight:600}.song__artist{font-size:.9rem;margin-bottom:.3rem;text-transform:capitalize}.song__genre{margin-top:.3rem}.card_box{padding:1rem;border-radius:5px;margin:1.5rem 0;box-shadow:0 0 5px 1px rgba(0,0,0,.2)}.card_box a{color:inherit;font-size:inherit;font-family:inherit;text-decoration:none;text-transform:inherit}.artist,.genre,.song_name{text-transform:capitalize}.artist{font-weight:400}.song_name{font-size:1.2rem;font-weight:700}.genre{font-weight:600}.preview{text-transform:lowercase;-webkit-touch-callout:none;-webkit-user-select:none;-html-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pagination ul li{display:inline-block;margin:0 1rem}.pagination ul li a{text-decoration:none;color:inherit}.page__number{padding:.1rem .5rem;border-radius:2px;background-color:#659dbd;color:#fff}.pagination{display:flex;align-items:center;justify-content:center}.disabled,.disabled a{opacity:.5;cursor:not-allowed}.footer{margin:3rem 0 1rem;color:#554024}.copyright{margin-top:2rem}.copy{text-align:center;margin-top:2rem}.summary{text-align:center}.social-list li{display:inline-block}.social-list li{margin:0 1rem}.icon{width:1.5rem}.soc{display:flex;align-items:center;justify-content:center}.soc>li a{color:#000}.header__lyrics{text-align:center;margin-top:.5rem}h2{text-transform:capitalize;font-size:1.4rem}.lyrics__content{display:flex;align-items:center;justify-content:center}.lyrics{padding:1rem;font-size:16px;text-transform:lowercase;-webkit-touch-callout:none;-webkit-user-select:none;-html-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.lyrics__box{background:#659dbd25;margin-top:.5rem;width:90%;height:auto;text-align:center;border-radius:5px}.second__header{display:flex;flex-direction:row;font-size:.8rem;align-items:center;justify-content:center;font-family:sans-serif}.artist__name{font-family:Raleway,sans-serif;font-weight:600}.suggestion{margin-top:1rem;display:grid;grid-template-columns:9rem 9rem;margin-bottom:-2rem}.sugge_head{text-transform:capitalize}.suggestion__header{margin-top:.4rem;margin-bottom:-1rem;text-align:center;font-size:1.2rem;font-family:lato,sans-serif;font-weight:200}.suggesstion__box{margin-top:.5rem;display:flex;align-items:center;justify-content:center}.sugge{text-align:center}.uploader{text-align:center;font-size:small;margin:.3rem 0 -.1rem 0}.who{margin-top:.5rem}.contact{margin-top:1rem;font-size:medium}.box{margin-bottom:-2rem}.box h1{margin-bottom:1.5rem}.h{text-transform:uppercase;text-align:center;margin-bottom:.4rem}.form{margin:3rem auto;width:30%}form{border-radius:.5rem;margin-top:.5rem;padding:1.5rem 10%;box-shadow:0 0 2rem 2px rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;justify-content:center}.logo-content{font-size:1.1rem}.form h3{font-weight:300;margin-bottom:1rem}.form-header{display:flex;align-items:center;justify-content:center;flex-direction:column}form input,form label{display:block;margin:.3rem 0}form label{font-weight:400;font-size:1.1rem;margin:.5rem 0}form input,form input:active,form input:focus,form input:hover{border:none;outline:0}form input{padding:.5rem 1rem;width:100%;font-size:1.2rem;font-family:nunito,sans-serif;background-color:#bc986a35;border-radius:.5rem}textarea{border:none;background-color:#bc986a35;border-radius:10px;display:block;padding:1rem;font-family:inherit;font-size:1rem;color:inherit}.admin__form{width:40%;margin:0 auto;padding:0 0 1rem}textarea:active,textarea:focus,textarea:hover{border:none;outline:0}.btn{width:70%;margin-top:.8rem;font-size:1rem}.main__btn{background-color:#2013038e;color:#fbeec1}.or{color:#554024;font-family:fantasy;margin-bottom:.4rem}.sec-btn{margin:0 0 1rem 0;text-decoration:none;color:#8d8741}.title{text-align:center;font-weight:600;margin:1rem 0}select>option{border:none}@media (max-width:480px){.logo{font-size:1.3rem;left:-.1rem}.logo_box{width:10%}.form{width:100%;margin-top:-.3rem}.form h3{font-size:1.2rem;font-weight:600}.alert__box,.message__box{padding:.8rem 1rem;margin:0 auto 1rem;border-radius:.2rem}.alert__box,.message__box{width:100%}.auth__user p.links__text{margin:0 .2rem 0}.auth__user{width:50%;margin-right:-3rem}.not-auth__user{margin:0 0 0 5rem}.pagination ul li{display:inline-block;margin:0 .2rem}}.dashboard{width:90%;text-align:center;margin:1rem auto -2rem}.song__box{margin:2rem 0}table{border-collapse:separate;width:100%}.table__element__small{width:5%;text-align:left;padding-left:.3rem}.action{text-align:center;padding:0;width:2%}.table__element{width:15%}.table__element__song-name{width:45%}.table__element,.table__element__song-name{width:20%;text-align:left;padding-left:.3rem;font-size:1.2rem}thead td{padding-left:.3rem}thead tr{background-color:#659dbd;color:#fff;padding-left:.3rem;font-weight:600;text-transform:capitalize;text-align:left}tr:nth-child(even){background-color:rgba(0,0,0,.4);color:#fff}tr:hover:not(theadtr){background-color:#659dbda8;color:#fff}.action__btn{text-decoration:underline}.admin_action_panel{color:#554024;border-radius:5px;height:3rem;display:flex;align-items:center;justify-content:center}.admin_action_panel ul li{display:inline-block;list-style:none}.simple__btn__cool,.simple__btn__danger{border:none;text-decoration:none;margin-left:2rem;font-size:1.2rem;color:#554024;font-weight:600;text-transform:capitalize}.simple__btn__cool i{color:green}.simple__btn__danger i{color:red}.text{margin-right:.3rem}.song_link{max-width:560px;width:95%;margin:1rem auto;height:315px}a.ytp-title-channel-logo{display:none}iframe{height:100%;width:100%}p.welcome__message{font-size:1.2rem}.alert__box,.message__box{padding:1rem 3rem;margin:0 auto;border-radius:.2rem}.alert__box{width:30%}.message__box{width:100%}.alert__box-errors,.message__box-errors{background-color:rgba(255,0,0,.15);color:#640000}.alert__box-success,.message__box-success{background-color:rgba(0,100,0,.15);color:#006400}
+/***** defining all needed ***/
+
+/*
+
+coding since 4/3/2020
+
+developer berking da quan
+
+colors :
+
+#659dbd // back
+#8d8741 // footer color
+#daad86 //unknown
+#bc986a // fd
+#fbeec1 // other
+
+*/
+
+/*** basics  ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+    background: #bc986a34;
+}
+
+body::selection {
+    background: #659dbd;
+    color: #fbeec1;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: #659dbd;
+    color: #fbeec1;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+/**** End of basics ****/
+
+/********    start of the header      ************/
+
+
+.headbox {
+    display: flex;
+    flex-direction: row;
+    background: #bc986a5d;
+    align-items: center;
+    color: #554024;
+    justify-content: space-between;
+    position: relative;
+}
+
+.user__box {
+    margin-right: 2rem;
+}
+
+.auth__user, .not-auth__user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+.auth__user p {
+    margin: 0 1rem;
+}
+
+.auth__user a, .not-auth__user a {
+    text-decoration: none;
+    /*color: #fbeec1;*/
+    color: #554024;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.logo_box {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.links {
+    text-decoration: none;
+    color: unset;
+}
+
+.nav-link {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fbeec1;
+}
+
+.nav__link__ul li {
+    display: inline-block;
+}
+
+.nav__link__ul li a {
+    text-decoration: none;
+    color: #fbeec1;
+    font-size: .85rem;
+    margin: .2rem;
+    text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+    /*color: #fbeec1;*/
+    color: #554024;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: .5rem;
+    height: 2.3rem;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/***** End of the header style *****/
+
+
+
+/**** start of the article style ****/
+.container {
+    color: #554024;
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.hiden {
+    display: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: .3rem 0 .3rem 0;
+}
+
+.line {
+    width: 85%;
+    margin: 0 auto .3rem auto;
+    position: relative;
+    top: .3rem;
+    opacity: 50%;
+    color: #554024;
+}
+
+.song__name {
+    font-size: 1rem;
+    margin-bottom: .1rem;
+    text-transform: capitalize;
+}
+
+.song_time {
+    font-size: small;
+}
+
+.time_of_upload {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.song__artist {
+    font-size: .9rem;
+    margin-bottom: .3rem;
+    text-transform: capitalize;
+}
+
+.song__genre {
+    margin-top: .3rem;
+}
+
+.card_box {
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card_box a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    text-transform: inherit;
+}
+
+.song_name, .artist, .genre {
+    text-transform: capitalize;
+}
+
+.artist {
+    font-weight: 400;
+}
+
+.song_name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.genre {
+    font-weight: 600;
+}
+
+.preview {
+    text-transform: lowercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -html-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pagination ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page__number {
+    padding: .1rem .5rem;
+    border-radius: 2px;
+    background-color: #659dbd;
+    color: #fff;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disabled, .disabled a {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/**** End of the article style ****/
+
+
+
+/**** start of the footer style ****/
+
+.footer {
+    margin: 3rem 0 1rem;
+    color: #554024;
+}
+
+.copyright {
+    margin-top: 2rem;
+}
+
+.copy { text-align: center; margin-top: 2rem; }
+.summary { text-align: center; }
+.social-list li { display: inline-block; }
+.social-list li { margin: 0 1rem; }
+.icon { width: 1.5rem; }
+.soc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soc > li a {
+    color: black;
+}
+/**** End of the footer style ****/
+
+
+
+
+
+/*******start of the lyrics page ***/
+.header__lyrics {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+.lyrics__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lyrics {
+    padding: 1rem;
+    font-size: 16px;
+    text-transform: lowercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -html-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.lyrics__box {
+    background: #659dbd25;
+    margin-top: .5rem;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.second__header {
+    display: flex;
+    flex-direction: row;
+    font-size: .8rem;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.artist__name { font-family: 'Raleway', sans-serif; font-weight: 600; }
+
+.suggestion {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 9rem 9rem;
+    margin-bottom: -2rem;
+}
+
+.sugge_head {
+    text-transform: capitalize;
+}
+
+.suggestion__header {
+    margin-top: .4rem;
+    margin-bottom: -1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'lato', sans-serif;
+    font-weight: 200;
+}
+
+.suggesstion__box {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sugge {
+    text-align: center;
+}
+
+.uploader {
+    text-align: center;
+    font-size: small;
+    margin: .3rem 0 -.1rem 0;
+}
+/******* end of the lyrics page styles ****/
+
+/***** start of the about page styles *****/
+.who {
+    margin-top: .5rem;
+}
+
+.contact {
+    margin-top: 1rem;
+    font-size: medium;
+}
+
+.box {
+    margin-bottom: -2rem;
+}
+
+.box h1 {
+    margin-bottom: 1.5rem;
+}
+
+.h {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: .4rem;
+}
+/***** end of the about page styles *****/
+
+/***** start of the login page styles *****/
+
+.form {
+    margin: 3rem auto;
+    width: 30%;
+}
+
+form {
+    border-radius: .5rem;
+    margin-top: .5rem;
+    padding: 1.5rem 10%;
+    box-shadow: 0px 0px 2rem 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-content {
+    font-size: 1.1rem;
+}
+
+.form h3 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form label, form input {
+    display: block;
+    margin: .3rem 0;
+}
+
+form label {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: .5rem 0;
+}
+
+form input,
+form input:hover,
+form input:focus,
+form input:active {
+    border: none;
+    outline: none;
+}
+
+form input {
+    padding: .5rem 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'nunito', sans-serif;
+    background-color: #bc986a35;
+    border-radius: .5rem;
+}
+
+textarea {
+    border: none;
+    background-color: #bc986a35;
+    border-radius: 10px;
+    display: block;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.admin__form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0 0 1rem;
+}
+
+textarea:focus,
+textarea:active,
+textarea:hover {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    width: 70%;
+    margin-top: .8rem;
+    font-size: 1rem;
+}
+
+.main__btn {
+    background-color: #2013038e;
+    color: #fbeec1;
+}
+
+.or {
+    color: #554024;
+    font-family: fantasy;
+    margin-bottom: .4rem;
+}
+
+.sec-btn {
+    margin: 0 0rem 1rem 0;
+    text-decoration: none;
+    color: #8d8741;
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+select > option {
+    border: none;
+}
+
+/**** following rules prevent user from copying text on somewords. **/
+/***** end of the login page styles *****/
+/************* following style rules *************/
+/************* Berking Da Quan *************/
+/************* 28/3/2020 - 21:26' **************/
+/******* start of admin page style *******/
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.dashboard {
+    width: 90%;
+    text-align: center;
+    margin: 1rem auto -2rem;
+}
+
+.song__box {
+    margin: 2rem 0;
+}
+
+/* designing the table for displaying the lyrics 
+  --table
+*/
+
+table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+.table__element__small {
+    width: 5%;
+    text-align: left;
+    padding-left: .3rem;
+}
+
+.action {
+    text-align: center;
+    padding: 0;
+    width: 2%;
+}
+
+.table__element {
+    width: 15%;
+}
+
+.table__element__song-name {
+    width: 45%;
+}
+
+.table__element, .table__element__song-name {
+    width: 20%;
+    text-align: left;
+    padding-left: .3rem;
+    font-size: 1.2rem;
+}
+
+thead td {
+    padding-left: .3rem;
+}
+
+thead tr {
+    background-color: #659dbd;
+    color: #fff;
+    padding-left: .3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+table a {
+    text-decoration: none;
+    color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+tr:hover:not(thead tr) {
+    background-color: #659dbda8;
+    color: #fff;
+}
+/*
+td {
+    border: solid rgba(0, 0, 0, 0.3) .1rem;
+}
+
+/* end of the table design */
+
+.action__btn {
+    text-decoration: underline;
+}
+
+.admin_action_panel {
+    color: #554024;
+    border-radius: 5px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_action_panel ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.simple__btn__danger,
+.simple__btn__cool {
+    border: none;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    color: #554024;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.simple__btn__cool i {
+    color: green;
+}
+.simple__btn__danger i {
+    color: red;
+}
+
+.text {
+    margin-right: .3rem;
+}
+
+.song_link {
+    max-width: 560px;
+    width: 95%;
+    margin: 1rem auto;
+    height: 315px;
+}
+
+a.ytp-title-channel-logo {
+    display: none;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+p.welcome__message {
+    font-size: 1.2rem;
+}
+
+/******* end of admin page style ******/
+
+/***** alert box and messages ******/
+
+.alert__box, .message__box {
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    border-radius: .2rem;
+}
+
+.alert__box {
+    width: 30%;
+}
+
+.message__box {
+    width: 100%;
+}
+
+.alert__box-errors, .message__box-errors {
+    background-color: rgba(255, 0, 0, 0.15);
+    color: rgb(100, 0, 0);
+}
+
+.alert__box-success, .message__box-success {
+    background-color: rgba(0, 100, 0, 0.15);
+    color: rgb(0, 100, 0);
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+        left: -.1rem;
+    }
+
+    .logo_box {
+        width: 10%;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: -.3rem;
+    }
+
+    .form h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .alert__box, .message__box {
+        padding: .8rem 1rem;
+        margin: 0 auto 1rem;
+        border-radius: .2rem;
+    }
+    
+    .alert__box, .message__box {
+        width: 100%;
+    }
+
+    .auth__user p.links__text {
+        margin: 0 .2rem 0;
+    }
+    
+    .auth__user {
+        width: 50%;
+        margin-right: -3rem;
+    }
+
+    .not-auth__user {
+        margin: 0 0 0 5rem;
+    }
+
+    .pagination ul li {
+        display: inline-block;
+        margin: 0 .2rem;
+    }
+}

@@ -83,13 +83,15 @@ require "basis.php";
                 ?>
                 
                         <tr class="__row">
-                            <td class="table__element__song-name"><?php echo $data['song_name']; ?></td>
-                            <td class="table__element"><?php echo $data['artist']; ?></td>
-                            <td class="table__element"><?php echo $data['time_of_upload']; ?></td>
-                            <td class="table__element__small"><?php echo $data['genre']; ?></td>
-                            <td class="table__element__small action"><a href="edit.php?id=<?php echo $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-edit"></i></a>
+                            <td class="table__element__song-name">
+                                <a href="lyrics.php?song_name=<?= $data['song_name']; ?>"><?= $data['song_name']; ?></a>
                             </td>
-                            <td class="table__element__small action"><a href="traitement.php?action=delete&id=<?php echo $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-trash-alt"></i></a></a>
+                            <td class="table__element"><?= $data['artist']; ?></td>
+                            <td class="table__element"><?= $data['time_of_upload']; ?></td>
+                            <td class="table__element__small"><?= $data['genre']; ?></td>
+                            <td class="table__element__small action"><a href="edit.php?id=<?= $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-edit"></i></a>
+                            </td>
+                            <td class="table__element__small action"><a href="traitement.php?action=delete&id=<?= $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-trash-alt"></i></a></a>
                             </td>
                         </tr>
                 <?php
