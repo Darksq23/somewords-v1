@@ -19,11 +19,13 @@ colors :
 /*** basics  ***/
 
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
     font-family: 'Nunito', sans-serif;
     font-weight: normal;
-    background: #bc986a34;
+    background: /*#3B1F2B*/#fff;
 }
 
 body::selection {
@@ -48,6 +50,12 @@ h1, h2, h3, h4 {
     font-weight: bold;
 }
 
+.container h1 {
+    font-family: "Lobster", sans-serif;
+    letter-spacing: .3rem;
+    font-size: 1.6rem;
+}
+
 /**** End of basics ****/
 
 /********    start of the header      ************/
@@ -56,9 +64,9 @@ h1, h2, h3, h4 {
 .headbox {
     display: flex;
     flex-direction: row;
-    background: #bc986a5d;
+    background: /*#bc986a5d*/#3B1F2B;
     align-items: center;
-    color: #554024;
+    color: #ffffff;
     justify-content: space-between;
     position: relative;
 }
@@ -123,7 +131,7 @@ h1, h2, h3, h4 {
 .logo a {
     text-decoration: none;
     /*color: #fbeec1;*/
-    color: #554024;
+    color: /*#554024*/#fff;
 }
 
 .logo {
@@ -152,7 +160,7 @@ img {
 
 /**** start of the article style ****/
 .container {
-    color: #554024;
+    color: #3B1F2B;
     width: 95%;
     margin: 1rem auto;
 }
@@ -543,7 +551,7 @@ select > option {
 /************* Berking Da Quan *************/
 /************* 28/3/2020 - 21:26' **************/
 /******* start of admin page style *******/
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
 
 .dashboard {
     width: 90%;
@@ -554,6 +562,7 @@ select > option {
 .song__box {
     margin: 2rem 0;
 }
+
 
 /* designing the table for displaying the lyrics 
   --table
