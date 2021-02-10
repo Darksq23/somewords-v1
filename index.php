@@ -25,7 +25,18 @@ $data->execute();
 ?>
 <?php require 'header.php' ?>
 <div class="container box">
-    <h1>Lyrics of the moment</h1>
+    <div class="search__box">
+        <form action="traitement.php" method="GET">
+            <div class="search__input">
+                <input type="search" name="s" id="search__id">
+            </div>
+            <button class="search__btn" type="submit">
+                <i class="fas fa-search"></i>
+                <span>search</span>
+            </button>
+        </form>
+    </div>
+    <h1>Hits of the moment</h1>
     <?php while($res = $data->fetch()){ ?>
         <div class="card_box">
             <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>">

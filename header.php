@@ -34,7 +34,4 @@
         </div>
     </div>
     <div class="container">
-        <div class="search__box">
-            <input type="search" name="search" id="search__id">
-        </div>
     

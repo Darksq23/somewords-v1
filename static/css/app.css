@@ -228,6 +228,39 @@ h1 {
     text-transform: inherit;
 }
 
+.search__box form {
+    border: 1px solid var(--text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0rem auto 1rem;
+}
+
+.search__box form input {
+    border: none;
+    box-shadow: none;
+}
+
+.search__box input {
+    display: flex;
+    width: 100%;
+    padding: .2rem 1rem;
+    border: none;
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+}
+
+.search__box .icon {
+    border-left: 1px solid var(--text-color);
+}
+
+.icon {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
 .song_name, .artist, .genre {
     text-transform: capitalize;
 }
@@ -433,7 +466,7 @@ h2 {
     width: 30%;
 }
 
-form {
+.form form, .admin__form form {
     border-radius: .5rem;
     margin-top: .5rem;
     padding: 1.5rem 10%;
@@ -460,12 +493,15 @@ form {
     flex-direction: column;
 }
 
-form label, form input {
+.form form label, 
+.form form input,
+.admin__form form label,
+.admin__form form input {
     display: block;
     margin: .3rem 0;
 }
 
-form label {
+.form form label, .admin__form form label{
     font-weight: 400;
     font-size: 1.1rem;
     margin: .5rem 0;
@@ -479,19 +515,25 @@ form input:active {
     outline: none;
 }
 
-form input {
+.form form input,
+.admin__form form input {
     padding: .5rem 1rem;
     width: 100%;
     font-size: 1.2rem;
     font-family: var(--main-font);
-    background-color: var(--light-background);
+    background-color: transparent;
     border-radius: .5rem;
 }
 
-textarea {
-    border: none;
-    background-color: #bc986a35;
-    border-radius: 10px;
+.form form input,
+.admin__form form input:not(.btn) {
+    border: 1px solid var(--text-color);
+}
+
+.admin__form textarea {
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    border-radius: 5px;
     display: block;
     padding: 1rem;
     font-family: inherit;
@@ -512,13 +554,15 @@ textarea:hover {
     outline: none;
 }
 
-.btn {
+.form .btn,
+.admin__form .btn {
     width: 70%;
     margin-top: .8rem;
     font-size: 1rem;
 }
 
-.main__btn {
+.form .main__btn,
+.admin__form .main__btn {
     background-color: var(--text-color);
     color: var(--background);
 }
