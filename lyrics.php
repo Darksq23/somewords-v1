@@ -18,7 +18,7 @@ while($res = $data->fetch()) { ?>
         <h2><?php echo $res['song_name']; ?></h2>
         <div class="second__header">
             <p class="artist__name"><?php echo $res['artist']; ?> | </p>
-            <p class="time_of_upload"><?php echo $res['time_of_upload']; ?></p>
+            <p class="time_of_upload"> <?php echo $res['time_of_upload']; ?></p>
         </div>
     </div>
     <div class="lyrics__content">

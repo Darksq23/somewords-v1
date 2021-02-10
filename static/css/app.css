@@ -22,15 +22,25 @@ colors :
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-body {
-    font-family: 'Nunito', sans-serif;
-    font-weight: normal;
-    background: /*#3B1F2B*/#fff;
+:root {
+    --background: #fff;
+    --text-color: #3B1F2B;
+    --light-text-color: rgba(59, 31, 43, .5);
+    --light-background: rgba(255, 255, 255, .5);
+    --logo-font: 'Julius Sans One', sans-serif;
+    --header-font: 'Lobster', sans-serif;
+    --main-font: 'Nunito', sans-serif;
 }
 
-body::selection {
-    background: #659dbd;
-    color: #fbeec1;
+body {
+    font-family: var(--main-font);
+    font-weight: normal;
+    background: var(--background);
+}
+
+body::selection, *::selection {
+    background: var(--text-color);
+    color: var(--background);
 }
 
 *,
@@ -41,17 +51,12 @@ body::selection {
     box-sizing: border-box;
 }
 
-*::selection {
-    background: #659dbd;
-    color: #fbeec1;
-}
-
 h1, h2, h3, h4 {
     font-weight: bold;
 }
 
 .container h1 {
-    font-family: "Lobster", sans-serif;
+    font-family: var(--header-font);
     letter-spacing: .3rem;
     font-size: 1.6rem;
 }
@@ -64,9 +69,9 @@ h1, h2, h3, h4 {
 .headbox {
     display: flex;
     flex-direction: row;
-    background: /*#bc986a5d*/#3B1F2B;
+    background: var(--text-color);
     align-items: center;
-    color: #ffffff;
+    color: var(--background);
     justify-content: space-between;
     position: relative;
 }
@@ -88,8 +93,7 @@ h1, h2, h3, h4 {
 
 .auth__user a, .not-auth__user a {
     text-decoration: none;
-    /*color: #fbeec1;*/
-    color: #554024;
+    color: var(--background);
     font-size: 1.3rem;
     font-weight: 600;
 }
@@ -113,7 +117,7 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fbeec1;
+    color: var(--background);
 }
 
 .nav__link__ul li {
@@ -122,7 +126,7 @@ h1, h2, h3, h4 {
 
 .nav__link__ul li a {
     text-decoration: none;
-    color: #fbeec1;
+    color: var(--background);
     font-size: .85rem;
     margin: .2rem;
     text-transform: uppercase;
@@ -130,8 +134,7 @@ h1, h2, h3, h4 {
 
 .logo a {
     text-decoration: none;
-    /*color: #fbeec1;*/
-    color: /*#554024*/#fff;
+    color: var(--background);
 }
 
 .logo {
@@ -140,7 +143,7 @@ h1, h2, h3, h4 {
     align-items: center;
     left: .5rem;
     height: 2.3rem;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: var(--logo-font);
     text-transform: uppercase;
     font-size: 1.5rem;
     margin-left: .5rem;
@@ -160,7 +163,7 @@ img {
 
 /**** start of the article style ****/
 .container {
-    color: #3B1F2B;
+    color: var(--text-color);
     width: 95%;
     margin: 1rem auto;
 }
@@ -196,7 +199,7 @@ h1 {
 }
 
 .time_of_upload {
-    font-family: 'Raleway', sans-serif;
+    font-family: inherit;
     font-weight: 600;
 }
 
@@ -288,7 +291,7 @@ h1 {
 
 .footer {
     margin: 3rem 0 1rem;
-    color: #554024;
+    color: var(--text-color);
 }
 
 .copyright {
@@ -306,9 +309,6 @@ h1 {
     justify-content: center;
 }
 
-.soc > li a {
-    color: black;
-}
 /**** End of the footer style ****/
 
 
@@ -358,10 +358,10 @@ h2 {
     font-size: .8rem;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: var(--main-font);
 }
 
-.artist__name { font-family: 'Raleway', sans-serif; font-weight: 600; }
+.artist__name { font-family: inherit; font-weight: 600; }
 
 .suggestion {
     margin-top: 1rem;
@@ -379,7 +379,7 @@ h2 {
     margin-bottom: -1rem;
     text-align: center;
     font-size: 1.2rem;
-    font-family: 'lato', sans-serif;
+    font-family: var(--main-font);
     font-weight: 200;
 }
 
@@ -483,8 +483,8 @@ form input {
     padding: .5rem 1rem;
     width: 100%;
     font-size: 1.2rem;
-    font-family: 'nunito', sans-serif;
-    background-color: #bc986a35;
+    font-family: var(--main-font);
+    background-color: var(--light-background);
     border-radius: .5rem;
 }
 
@@ -519,14 +519,8 @@ textarea:hover {
 }
 
 .main__btn {
-    background-color: #2013038e;
-    color: #fbeec1;
-}
-
-.or {
-    color: #554024;
-    font-family: fantasy;
-    margin-bottom: .4rem;
+    background-color: var(--text-color);
+    color: var(--background);
 }
 
 .sec-btn {
@@ -605,8 +599,8 @@ thead td {
 }
 
 thead tr {
-    background-color: #659dbd;
-    color: #fff;
+    background-color: var(--text-color);
+    color: var(--background);
     padding-left: .3rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -624,8 +618,8 @@ tr:nth-child(even) {
 }
 
 tr:hover:not(thead tr) {
-    background-color: #659dbda8;
-    color: #fff;
+    background-color: var(--light-text-color);
+    color: var(--background);
 }
 /*
 td {
