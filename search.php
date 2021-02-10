@@ -4,7 +4,7 @@ $alllyrics = $dbconnection->query("SELECT * FROM lyrics ORDER BY id DESC");
 
 if ((isset($_GET['s']) && !empty($_GET['s']))) {
     $search = htmlspecialchars($_GET['s']);
-    $alllyrics = $dbconnection->query("SELECT song_name, artist FROM lyrics WHERE MATCH LIKE "%'.$search.'%" ORDER BY id DESC");
+    $alllyrics = $dbconnection->query("SELECT song_name, artist FROM lyrics WHERE artist LIKE "'%.$search.%'" ORDER BY id DESC");
 }
 
 ?>
@@ -27,7 +27,7 @@ if ((isset($_GET['s']) && !empty($_GET['s']))) {
         <?php if ($alllyrics->rowCount() < 0): ?>
             <?= "nothing found!" ?>
         <?php else: ?>
-            <?= "found things yayyyy :(" ?>
+            <?= "found things yayyyy :)" ?>
         <?php endif ?>
     </div>
         
@@ -77,6 +77,7 @@ if ((isset($_GET['s']) && !empty($_GET['s']))) {
         </div>
     <?php endif ?>
 
+*/
 
 
 ?>-->
