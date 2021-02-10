@@ -9,7 +9,7 @@ if (isset($_GET['pageno'])) {
     $pageno = 1;
 }
 // fixer le nombre d'entrer a recuperer
-$no_of_record = 12;
+$no_of_record = 10;
 // trouver la limite
 $offset = ($pageno - 1) * $no_of_record;
 // compte des données dans la db
@@ -39,12 +39,21 @@ $data->execute();
     <h1>Hits of the moment</h1>
     <?php while($res = $data->fetch()){ ?>
         <div class="card_box">
-            <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>">
-            <p class="song_name"><?php echo $res['song_name']; ?></p>
-            </a>
-            <p class="artist"><?php echo $res['artist']; ?></p>
-            <p class="genre"><?php echo $res['genre']; ?></p>
-            <p class="time"><?php echo $res['time_of_upload']; ?></p>
+            <div class="card_box-info">
+                <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>">
+                    <p class="song_name"><?php echo $res['song_name']; ?></p>
+                </a>
+                <a href="artist.php?name=<?php echo $res['artist']; ?>">
+                    <p class="artist underline"><?php echo $res['artist']; ?></p>
+                </a>
+                <p class="genre"><?php echo $res['genre']; ?></p>
+                <p class="time"><?php echo $res['time_of_upload']; ?></p>
+            </div>
+            <div class="card_box-play">
+                <a href="lyrics.php?song_name=<?php echo $res['song_name']; ?>">
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>
         </div>
         <?php
         }

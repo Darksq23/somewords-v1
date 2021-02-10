@@ -38,7 +38,7 @@ require "basis.php";
         <div class="dashboard" id="hide">
 
             <div class="admin_action_panel">
-                <p class="welcome__message">welcome back <?= $_SESSION['username'] ?></p>
+                <p class="welcome__message">welcome <?= $_SESSION['username'] ?></p>
                 <ul>
                     <li>
                         <a href="add.php?user=
