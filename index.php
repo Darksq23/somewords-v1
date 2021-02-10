@@ -28,7 +28,7 @@ $data->execute();
     <div class="search__box">
         <form action="traitement.php" method="GET">
             <div class="search__input">
-                <input type="search" name="s" id="search__id">
+                <input type="search" name="s" id="search__id" placeholder="search for song, artist...">
             </div>
             <button class="search__btn" type="submit">
                 <i class="fas fa-search"></i>

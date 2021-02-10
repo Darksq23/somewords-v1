@@ -228,18 +228,26 @@ h1 {
     text-transform: inherit;
 }
 
+/***** search bar design ******/
+
+.search__box {
+    border-radius: .3rem;
+}
+
 .search__box form {
     border: 1px solid var(--text-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
     margin: 0rem auto 1rem;
+    border-radius: .3rem;
 }
 
 .search__box form input {
     border: none;
     box-shadow: none;
+    border-radius: .3rem;
 }
 
 .search__box input {
@@ -249,6 +257,14 @@ h1 {
     border: none;
     font-family: var(--main-font);
     font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__input {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .search__box .icon {
@@ -256,10 +272,30 @@ h1 {
 }
 
 .icon {
-    width: 30%;
     display: flex;
     flex-direction: row;
 }
+
+.search__btn {
+    background: var(--text-color);
+    border: none;
+    padding: .3rem 1rem;
+    color: var(--background);
+    text-transform: capitalize;
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+
+/*The following CSS code should remove that clear button on all search fields on page:*/
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/**** end of the search bar design ****/
 
 .song_name, .artist, .genre {
     text-transform: capitalize;
