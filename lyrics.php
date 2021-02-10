@@ -9,9 +9,21 @@ $data = $dbconnection->prepare($query_for_lyrics);
 $data->execute(array('song_name' => $song_name));
 
 $query_for_suggestion = 'SELECT * FROM lyrics WHERE artist = :artist';
-$suggestion = $dbconnection->prepare($query_for_suggestion);
+$suggestion = $dbconnection->prepare($query_for_suggestion); ?>
 
-while($res = $data->fetch()) { ?>
+<div class="search__box">
+        <form action="search.php" method="GET">
+            <div class="search__input">
+                <input type="search" name="s" id="search__id" placeholder="search for song, artist...">
+            </div>
+            <button class="search__btn" type="submit">
+                <i class="fas fa-search"></i>
+                <span>search</span>
+            </button>
+        </form>
+    </div>
+
+<?php while($res = $data->fetch()) { ?>
 
     <div class="container box">
     <div class="header__lyrics">

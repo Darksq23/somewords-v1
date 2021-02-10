@@ -864,4 +864,15 @@ p.welcome__message {
         display: inline-block;
         margin: 0 .2rem;
     }
+
+    .search__box form {
+        width: 100%;
+        margin: 0rem auto 1rem;
+        border-radius: .3rem;
+    }
+
+    .container h1 {
+        letter-spacing: .2rem;
+        font-size: 1.3rem;
+    }
 }

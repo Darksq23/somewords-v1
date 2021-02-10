@@ -5,7 +5,7 @@ require_once "basis.php";
 <?php require 'header.php' ?>
 <div class="container box">
     <div class="search__box">
-        <form action="traitement.php" method="GET">
+        <form action="search.php" method="GET">
             <div class="search__input">
                 <input type="search" name="s" id="search__id" placeholder="search for song, artist...">
             </div>
@@ -17,7 +17,6 @@ require_once "basis.php";
     </div>
     <?php if (isset($_GET['name']) && !empty($_GET['name'])): ?>
         <?php
-            require_once "basis.php";
             $query = "SELECT * FROM lyrics WHERE artist = :artist ORDER BY id DESC";
             $data = $dbconnection->prepare($query);
             $data->execute(['artist' => $_GET['name']]);

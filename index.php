@@ -26,7 +26,7 @@ $data->execute();
 <?php require 'header.php' ?>
 <div class="container box">
     <div class="search__box">
-        <form action="traitement.php" method="GET">
+        <form action="search.php" method="GET">
             <div class="search__input">
                 <input type="search" name="s" id="search__id" placeholder="search for song, artist...">
             </div>
