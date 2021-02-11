@@ -14,7 +14,7 @@ $suggestion = $dbconnection->prepare($query_for_suggestion); ?>
 <div class="search__box">
         <form action="search.php" method="GET">
             <div class="search__input">
-                <input type="search" name="s" id="search__id" placeholder="search for song, artist...">
+                <input type="search" name="s" id="search__id" placeholder="search here...">
             </div>
             <button class="search__btn" type="submit">
                 <i class="fas fa-search"></i>
