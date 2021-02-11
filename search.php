@@ -11,8 +11,9 @@ if(isset($_GET['s']) && !empty($_GET['s'])) {
 }
 
 //$data = $dbconnection->query('select * from lyrics');
-$song = $dbconnection->query('select * from lyrics where song_name like "%'.$q.'%" ORDER BY id DESC');
-$artist = $dbconnection->query('select * from lyrics where artist like "%'.$q.'%" ORDER BY id DESC');
+$song = $dbconnection->query('select * from lyrics where song_name like "%'.$q.'%" ORDER BY id DESC'); /// search by songs 
+$artist = $dbconnection->query('select * from lyrics where artist like "%'.$q.'%" ORDER BY id DESC'); //// search by artist
+$deep_search = $dbconnection->query('select * from lyrics where concat(song_name, artist) like"%'.$q.'%" ORDER BY id DESC'); /// search in the two fields also deep search!!!
 ?>
 
     <div class="search__box">
@@ -26,17 +27,40 @@ $artist = $dbconnection->query('select * from lyrics where artist like "%'.$q.'%
             </button>
         </form>
     </div>
-    <div class="container box">
-        <?php if($song->rowCount() <= 0 && $artist->rowCount() <= 0): ?>
-            <h3>Sorry but nothing found! :(</h3>
+    <div class="container box search__result">
+
+        <?php if($song->rowCount() <= 0 && $artist->rowCount() <= 0 && $deep_search->rowCount() <= 0 ): ?>
+            <h3>Sorry but nothing found! for "<?= $q ?>"</h3>
         <?php else: ?>
             <h3>Result for "<?= $q ?>"</h3>
             <?php while ($res = $song->fetch()): ?>
-                <p><?= $res['song_name'] ?></p>
+                <p>
+                    <a href="lyrics.php?song_name=<?= $res['song_name'] ?>">
+                        <span class="name"><?= $res['song_name'] ?></span> by 
+                        <span class="name"><?= $res['artist'] ?></span>
+                    </a>
+                </p>
             <?php endwhile ?>
-            <?php while ($res = $artist->fetch()): ?>
-                <p><?= $res['song_name'] ?></p>
-            <?php endwhile ?>
+            <?php if ($song->rowCount() <= 0 ): ?>
+                <?php while ($res = $artist->fetch()): ?>
+                    <p>
+                        <a href="lyrics.php?song_name=<?= $res['song_name'] ?>">
+                        <span class="name"><?= $res['song_name'] ?></span> by 
+                        <span class="name"><?= $res['artist'] ?></span>
+                        </a>
+                    </p>    
+                <?php endwhile ?>
+            <?php endif ?>
+            <?php if ($song->rowCount() <= 0 && $artist->rowCount() <= 0): ?>
+                <?php while ($res = $deep_search->fetch()): ?>
+                    <p>
+                        <a href="lyrics.php?song_name=<?= $res['song_name'] ?>">
+                        <span class="name"><?= $res['song_name'] ?></span> by 
+                        <span class="name"><?= $res['artist'] ?></span>
+                        </a>
+                    </p>
+                <?php endwhile ?>
+            <?php endif ?>
         <?php endif ?>
     </div>
 
