@@ -21,6 +21,7 @@ colors :
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 
 
 :root {
@@ -30,7 +31,7 @@ colors :
     --light-text-color: rgba(59, 31, 43, .5);
     --light-background: rgba(255, 255, 255, .5);
     --logo-font: 'Julius Sans One', sans-serif;
-    --header-font: 'Lobster', sans-serif;
+    --header-font: 'Rancho', sans-serif;
     --main-font: 'Nunito', sans-serif;
 }
 
@@ -59,7 +60,7 @@ h1, h2, h3, h4 {
 
 .container h1 {
     font-family: var(--header-font);
-    letter-spacing: .3rem;
+    letter-spacing: .1rem;
     font-size: 1.5rem;
 }
 
