@@ -24,7 +24,8 @@ colors :
 
 :root {
     --background: #fff;
-    --text-color: #3B1F2B;
+    --styling-color: #3B1F2B;
+    --text-color: #000000;
     --light-text-color: rgba(59, 31, 43, .5);
     --light-background: rgba(255, 255, 255, .5);
     --logo-font: 'Julius Sans One', sans-serif;
@@ -568,7 +569,6 @@ form input,
 form input:hover,
 form input:focus,
 form input:active {
-    border: none;
     outline: none;
 }
 
@@ -607,7 +607,6 @@ form input:active {
 textarea:focus,
 textarea:active,
 textarea:hover {
-    border: none;
     outline: none;
 }
 
@@ -873,6 +872,6 @@ p.welcome__message {
 
     .container h1 {
         letter-spacing: .2rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
