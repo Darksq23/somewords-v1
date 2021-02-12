@@ -47,7 +47,7 @@ else if ($_GET['action'] == "logout") {
 
 else if ($_GET['action'] == "insert") {
     require_once "basis.php";
-    $insert_query = "insert into lyrics values (:id, :song_name, :artist, :lyrics, :genre, now(), :likes, :views, :link)";
+    $insert_query = "insert into lyrics values (:id, :song_name, :artist, :lyrics, :genre, now(), :likes, :views, :link, :uploader)";
 
     $res = $dbconnection->prepare($insert_query);
     $res->execute(array(
@@ -58,7 +58,8 @@ else if ($_GET['action'] == "insert") {
         'lyrics' => $_POST['lyrics'],
         'link' => $_POST['link'],
         'genre' => $_POST['genre'],
-        'song_name' => $_POST['song_name']
+        'song_name' => $_POST['song_name'],
+        'uploader' => $_COOKIE['username']
     ));
 
     if (!$res) {

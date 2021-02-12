@@ -27,10 +27,10 @@ $suggestion = $dbconnection->prepare($query_for_suggestion); ?>
 
     <div class="container box">
     <div class="header__lyrics">
-        <h2><?php echo $res['song_name']; ?></h2>
+        <h2><?php echo $res['song_name']; ?> - <?php echo $res['artist']; ?></h2>
         <div class="second__header">
-            <p class="artist__name"><?php echo $res['artist']; ?> | </p>
-            <p class="time_of_upload"> <?php echo $res['time_of_upload']; ?></p>
+            <p class="artist__name">lyrics by <?php echo $res['uploader']; ?> |</p>
+            <p class="time_of_upload"><?php echo $res['time_of_upload']; ?></p>
         </div>
     </div>
     <div class="lyrics__content">

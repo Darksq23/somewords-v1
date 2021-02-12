@@ -73,6 +73,7 @@ require "basis.php";
                                 <td>Song name</td>
                                 <td>artist</td>
                                 <td>time</td>
+                                <td>uploader</td>
                                 <td>genre</td>
                             </tr>
                         </thead>
@@ -88,6 +89,7 @@ require "basis.php";
                             </td>
                             <td class="table__element"><?= $data['artist']; ?></td>
                             <td class="table__element"><?= $data['time_of_upload']; ?></td>
+                            <td class="table__element"><?= $data['uploader']; ?></td>
                             <td class="table__element__small"><?= $data['genre']; ?></td>
                             <td class="table__element__small action"><a href="edit.php?id=<?= $data['id']; ?>" id="edit" class="links action__btn"><i class="fas fa-edit"></i></a>
                             </td>

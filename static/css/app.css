@@ -27,7 +27,7 @@ colors :
 :root {
     --background: #fff;
     --styling-color: #3B1F2B;
-    --text-color: #000000;
+    --text-color: #424242;
     --light-text-color: rgba(59, 31, 43, .5);
     --light-background: rgba(255, 255, 255, .5);
     --logo-font: 'Julius Sans One', sans-serif;
@@ -784,6 +784,7 @@ a.ytp-title-channel-logo {
 iframe {
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 
 p.welcome__message {
